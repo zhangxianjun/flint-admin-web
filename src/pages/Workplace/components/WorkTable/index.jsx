@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import {
   Avatar,
   Box,
@@ -14,9 +14,8 @@ import {
   List,
 } from '@alifd/next';
 import mock from './mock';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
-const { useState } = React;
 const { Cell } = ResponsiveGrid;
 const TimelineItem = Timeline.Item;
 const DEFAULT_DATA = {
@@ -32,6 +31,11 @@ const DEFAULT_DATA = {
   updateList: mock.updateList,
   entranceList: mock.entrances,
 };
+const colorMap = {
+  high: 'red',
+  middle: 'yellow',
+  low: 'green',
+};
 
 const WorkTable = (props) => {
   const { dataSource = DEFAULT_DATA } = props;
@@ -41,19 +45,9 @@ const WorkTable = (props) => {
   const changeTab = (val) => setTab(val);
 
   const renderLevel = (text, index) => {
-    let color;
-
-    if (text === 'high') {
-      color = 'red';
-    } else if (text === 'middle') {
-      color = 'yellow';
-    } else {
-      color = 'green';
-    }
-
     return (
       <span key={text + index.toString()}>
-        <Tag size="small" color={color}>
+        <Tag size="small" color={colorMap[text]}>
           {text}
         </Tag>
       </span>
@@ -61,17 +55,17 @@ const WorkTable = (props) => {
   };
 
   return (
-    <div className={styles.workTable}>
-      <div className={styles.workerContainer}>
+    <div className={styles.WorkTable}>
+      <div className={styles.workerContainor}>
         <Box flex={1}>
           <Box direction="row" spacing={28}>
             <Avatar size={80} src={person.avatar} className={styles.avatar} />
             <Box>
-              <Typography.Text className={styles.titleName}>
+              <Typography.Text className={styles.TitleName}>
                 {person.surname}
                 {person.name}
               </Typography.Text>
-              <Typography.Text className={styles.titleInfo}>{person.email}</Typography.Text>
+              <Typography.Text className={styles.TitleInfo}>{person.email}</Typography.Text>
             </Box>
           </Box>
           <Tab activeKey={tab} className={styles.tab} onChange={changeTab}>
@@ -140,7 +134,7 @@ const WorkTable = (props) => {
                           <>
                             <span className={styles.planTime}>{item.planTime}</span>
                             <br />
-                            <span className={styles.planDuring}>{item.planDuring}</span>
+                            <span className={styles.planDuaring}>{item.planDuaring}</span>
                           </>
                         }
                       />

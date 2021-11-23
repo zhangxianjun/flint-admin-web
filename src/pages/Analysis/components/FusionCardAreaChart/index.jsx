@@ -1,8 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 import { Card } from '@alifd/next';
 import { Chart, Geom } from 'bizcharts';
 import mock from './mock.js';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
 const DEFAULT_DATA = {
   title: '',
@@ -25,9 +25,9 @@ const FusionCardAreaChart = (props = DEFAULT_DATA) => {
         </>
       ) : null}
       <Card.Content>
-        <div className={styles.cardSubTitle}>{subTitle}</div>
-        <div className={styles.cardValue}>{value}</div>
-        <div className={styles.cardDes}>
+        <div className={styles.subTitle}>{subTitle}</div>
+        <div className={styles.value}>{value}</div>
+        <div className={styles.des}>
           {des}
           <span>{rate}↑</span>
         </div>

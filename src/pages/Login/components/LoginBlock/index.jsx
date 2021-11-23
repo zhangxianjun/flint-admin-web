@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Input, Message, Form, Divider, Checkbox, Icon } from '@alifd/next';
 import { useInterval } from './utils';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
 const { Item } = Form;
 const DEFAULT_DATA = {
@@ -12,7 +12,6 @@ const DEFAULT_DATA = {
   phone: '',
   code: '',
 };
-const { useState } = React;
 
 const LoginBlock = (
   props = {
@@ -132,7 +131,7 @@ const LoginBlock = (
   };
 
   return (
-    <div className={styles.loginBlock}>
+    <div className={styles.LoginBlock}>
       <div className={styles.innerBlock}>
         <a href="#">
           <img

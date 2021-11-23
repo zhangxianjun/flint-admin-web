@@ -1,8 +1,7 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Box, ResponsiveGrid, Divider, Card, Avatar, Upload, Button, Form, Input, Message } from '@alifd/next';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
-const { useState } = React;
 const { Cell } = ResponsiveGrid;
 const FormItem = Form.Item;
 const DEFAULT_DATA = {
@@ -29,16 +28,16 @@ const SettingPersonBlock = (props) => {
     setValue(values);
   };
 
-  let countDownTimer;
+  let coutDownTimer;
   let countDown = 60; // 获取验证码按钮点击示例
 
-  const onValidateCodeButtonClicked = () => {
+  const onValideCodeButtonClicked = () => {
     setButtonDisabled(true);
     countDown = 60;
     setButtonText(`${countDown}s`);
-    countDownTimer = setInterval(() => {
+    coutDownTimer = setInterval(() => {
       if (--countDown <= 0) {
-        if (countDownTimer) clearInterval(countDownTimer);
+        if (coutDownTimer) clearInterval(coutDownTimer);
         setButtonText('获取验证码');
         setButtonDisabled(false);
         return;
@@ -50,7 +49,7 @@ const SettingPersonBlock = (props) => {
 
   return (
     <Card free>
-      <Card.Content className={styles.settingPersonBlock}>
+      <Card.Content className={styles.SettingPersonBlock}>
         <Form value={postData} labelAlign="top" onChange={formChange} responsive>
           <FormItem label="" colSpan={12}>
             <ResponsiveGrid gap={10}>
@@ -88,10 +87,10 @@ const SettingPersonBlock = (props) => {
               </Cell>
               <Cell colSpan={4}>
                 <Button
-                  className={styles.validateCodeButton}
+                  className={styles.valideCodeButton}
                   type="secondary"
                   disabled={buttonDisabled}
-                  onClick={onValidateCodeButtonClicked}
+                  onClick={onValideCodeButtonClicked}
                 >
                   {buttonText}
                 </Button>

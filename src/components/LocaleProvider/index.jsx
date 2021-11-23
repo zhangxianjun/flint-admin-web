@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import { ConfigProvider } from '@alifd/next'; // 引入 react-intl 多语言包
 

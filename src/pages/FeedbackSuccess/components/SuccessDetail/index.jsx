@@ -1,9 +1,8 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Button, Message, Card } from '@alifd/next';
 import { useInterval } from './utils';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
-const { useState } = React;
 export default function SuccessDetail(props) {
   const {
     statusCode = '提交成功',
@@ -11,7 +10,7 @@ export default function SuccessDetail(props) {
     image = 'https://img.alicdn.com/tfs/TB1UOSVoqL7gK0jSZFBXXXZZpXa-73-72.png',
     buttonBackDesc = '返回列表',
     buttonContinueDesc = '继续创建',
-    countDownSeconds: countDownSecnods = 5,
+    countDownSecnods = 5,
     onButtonBack = null,
     onButtonContinue = null,
   } = props;
@@ -45,10 +44,10 @@ export default function SuccessDetail(props) {
   };
 
   return (
-    <Card free className={styles.successDetail}>
+    <Card free className={styles.SuccessDetail}>
       <div>
         <img src={image} className={styles.exceptionImage} alt="img" />
-        <h1 className={styles.statusCode}>{statusCode}</h1>
+        <h1 className={styles.statuscode}>{statusCode}</h1>
         <div className={styles.description}>{`${second > 0 ? second : 0}${description}`}</div>
         <div className={styles.operationWrap}>
           <Button type="primary" onClick={gobackHandle} className={styles.mainAction}>

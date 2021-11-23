@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Form, Input, Radio, Select, Checkbox, Field, Table, Grid, Button, Icon, Card, Pagination } from '@alifd/next';
 import { useFusionTable } from 'ahooks';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
 const RadioGroup = Radio.Group;
 const CheckboxGroup = Checkbox.Group;

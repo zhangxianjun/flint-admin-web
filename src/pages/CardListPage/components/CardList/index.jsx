@@ -1,8 +1,7 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Search, Card, Tag, ResponsiveGrid, Divider, Typography, Icon, Loading } from '@alifd/next';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
-const { useState, useEffect } = React;
 const { Group: TagGroup, Selectable: SelectableTag } = Tag;
 const { Cell } = ResponsiveGrid;
 const DEFAULT_DATA = {
@@ -61,13 +60,13 @@ const CardList = (props) => {
 
   const renderCards = () => {
     return dataSource.cards.map((c, i) => (
-      <Cell colSpan={3} className={styles.listItem} key={i}>
-        <div className={styles.listMain}>
+      <Cell colSpan={3} className={styles.ListItem} key={i}>
+        <div className={styles.main}>
           <img src="https://shadow.elemecdn.com/app/element/list.76b098b1-1732-11ea-948d-7d2ddf6d1c39.png" alt="img" />
-          <div className={styles.listContent}>
-            <div className={styles.listTitle}>{c.title}</div>
-            <div className={styles.listInfo}>{c.content}</div>
-            <div className={styles.listLink}>
+          <div className={styles.content}>
+            <div className={styles.title}>{c.title}</div>
+            <div className={styles.info}>{c.content}</div>
+            <div className={styles.link}>
               <a href="#">{c.link[0]}</a>
               <a href="#">{c.link[1]}</a>
             </div>
@@ -79,7 +78,7 @@ const CardList = (props) => {
 
   return (
     <>
-      <Card free className={styles.cardList}>
+      <Card free className={styles.CardList}>
         <Box align="center">
           <Search type="primary" hasIcon={false} searchText="搜索" onSearch={onSearchClick} />
         </Box>
@@ -89,13 +88,13 @@ const CardList = (props) => {
             margin: '24px 0',
           }}
         />
-        <Box className={styles.tagBox}>
-          <div className={styles.tagBoxItem}>
-            <Typography.Text className={styles.tagTitleName}>内容分类</Typography.Text>
+        <Box className={styles.TagBox}>
+          <div className={styles.TagBoxItem}>
+            <Typography.Text className={styles.TagTitleName}>内容分类</Typography.Text>
             <TagGroup>{renderTagListA()}</TagGroup>
           </div>
-          <div className={styles.tagBoxItem}>
-            <Typography.Text className={styles.tagTitleName}>时间</Typography.Text>
+          <div className={styles.TagBoxItem}>
+            <Typography.Text className={styles.TagTitleName}>时间</Typography.Text>
             <TagGroup>{renderTagListB()}</TagGroup>
           </div>
         </Box>
@@ -107,9 +106,9 @@ const CardList = (props) => {
         }}
       >
         <ResponsiveGrid gap={20}>
-          <Cell colSpan={3} className={styles.listItem}>
-            <Box className={styles.listAdd} justify="center" align="center">
-              <Icon type="add" className={styles.listIcon} />
+          <Cell colSpan={3} className={styles.ListItem}>
+            <Box className={styles.add} justify="center" align="center">
+              <Icon type="add" className={styles.icon} />
               <div className={styles.addText}>添加内容</div>
             </Box>
           </Cell>

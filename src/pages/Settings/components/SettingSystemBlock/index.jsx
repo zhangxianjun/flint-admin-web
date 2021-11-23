@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Avatar,
   Card,
@@ -16,9 +16,8 @@ import {
   Dialog,
   Icon,
 } from '@alifd/next';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
-const { useState, useEffect } = React;
 const { Cell } = ResponsiveGrid;
 const FormItem = Form.Item;
 const MockData = [
@@ -83,12 +82,12 @@ const DEFAULT_ON_SUBMIT = (values, errors) => {
 const SettingSystemBlock = (props) => {
   const { dataSource = DEFAULT_DATA, onSubmit = DEFAULT_ON_SUBMIT } = props;
   const [priList, setPriList] = useState([]);
-  const [initialized, setInitialize] = useState(false);
+  const [inited, setInited] = useState(false);
   const [postData, setValue] = useState(dataSource);
   useEffect(() => {
     setPriList(MockData);
-    setInitialize(true);
-  }, [initialized]);
+    setInited(true);
+  }, [inited]);
 
   const formChange = (values) => {
     setValue(values);

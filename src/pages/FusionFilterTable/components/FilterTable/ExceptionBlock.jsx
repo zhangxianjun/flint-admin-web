@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React from 'react';
 import { Button } from '@alifd/next';
 
-const ExceptionBlock = ({ onRefresh }) => {
+const ExceptionBlock = ({ onRefresh = () => {} }) => {
   return (
     <div className="table-empty-block">
       <div className="result-image">

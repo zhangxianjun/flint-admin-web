@@ -1,5 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import { Box, Button, Card, Form, Input, Select, Radio, Field, Divider, Message } from '@alifd/next';
+import styles from './index.module.scss';
 
 const DEFAULT_DATA = {
   job: {
@@ -29,8 +30,8 @@ const ClassifiedForm = (props) => {
     }
 
     const values = {
-      job: jobField.getValues(),
-      treatment: treatmentField.getValues(),
+      basic: jobField.getValues(),
+      member: treatmentField.getValues(),
     };
     console.log('values:', values);
     onSubmit(values);
@@ -38,8 +39,8 @@ const ClassifiedForm = (props) => {
   };
 
   return (
-    <div>
-      <Card free>
+    <div className={styles.ClassifiedForm}>
+      <Card free className={styles.Card}>
         <Card.Header title="工作经历" />
         <Card.Divider />
         <Card.BulletHeader title="分类信息" />
@@ -98,7 +99,7 @@ const ClassifiedForm = (props) => {
               </Radio.Group>
             </Form.Item>
             <Form.Item colSpan={8} label="选项/RSU 描述">
-              <Input.TextArea name="rsuDesc" placeholder="请输入" showLimitHint maxLength={500} />
+              <Input.TextArea name="rsuDesc" placeholder="请输入" hasLimitHint maxLength={500} />
             </Form.Item>
           </Form>
           <Divider />

@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React from 'react';
 import { Card } from '@alifd/next';
 import { Chart, Geom, Axis, Legend } from 'bizcharts';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
 const DEFAULT_DATA = {
   title: '消费数据',
@@ -89,7 +89,7 @@ const FusionCardGroupBarChart = (props) => {
   const { cardConfig = DEFAULT_DATA } = props;
   const { title, chartData, chartHeight } = cardConfig;
   return (
-    <Card free className={styles.fusionCardGroupBarChart}>
+    <Card free className={styles.FusionCardGroupBarChart}>
       <Card.Header title={title} />
       <Card.Divider />
       <Card.Content>

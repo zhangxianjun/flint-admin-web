@@ -1,8 +1,7 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Search, Card, Tag, Divider, Typography, Icon, Loading, Button, Pagination } from '@alifd/next';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
-const { useState, useEffect } = React;
 const { Group: TagGroup, Selectable: SelectableTag } = Tag;
 const DEFAULT_DATA = {
   tagsA: ['类目一', '类目二', '类目三', '类目四', '类目五', '类目六', '类目七', '类目八', '类目九', '类目十'],
@@ -65,21 +64,20 @@ const BasicList = (props) => {
 
   const renderCards = () => {
     return dataSource.cards.map((c, i) => (
-      <div className={styles.listItem} key={i}>
-        <div className={styles.cardMain}>
-          <div className={styles.cardLeft}>
+      <div className={styles.ListItem} key={i}>
+        <div className={styles.main}>
+          <div className={styles.left}>
             <img
               src="https://shadow.elemecdn.com/app/element/list.62a82841-1bcb-11ea-a71c-17428dec1b82.png"
               alt="img"
             />
             <div>
-              <div className={styles.cardTitle}>{c.title}</div>
-              <div className={styles.cardContent}>{c.content}</div>
+              <div className={styles.title}>{c.title}</div>
+              <div className={styles.content}>{c.content}</div>
               <div className={styles.subContent}>{c.subContent}</div>
             </div>
           </div>
-
-          <div className={styles.cardRight}>
+          <div className={styles.right}>
             <Button type="primary" text>
               编辑
             </Button>
@@ -97,7 +95,7 @@ const BasicList = (props) => {
 
   return (
     <>
-      <Card free className={styles.basicList}>
+      <Card free className={styles.BasicList}>
         <Box align="center">
           <Search type="primary" hasIcon={false} searchText="搜索" onSearch={onSearchClick} />
         </Box>
@@ -107,27 +105,28 @@ const BasicList = (props) => {
             margin: '24px 0',
           }}
         />
-        <Box className={styles.tagBox}>
-          <div className={styles.tagBoxItem}>
-            <Typography.Text className={styles.tagTitleName}>内容分类</Typography.Text>
+        <Box className={styles.TagBox}>
+          <div className={styles.TagBoxItem}>
+            <Typography.Text className={styles.TagTitleName}>内容分类</Typography.Text>
             <TagGroup>{renderTagListA()}</TagGroup>
           </div>
-          <div className={styles.tagBoxItem}>
-            <Typography.Text className={styles.tagTitleName}>时间</Typography.Text>
+          <div className={styles.TagBoxItem}>
+            <Typography.Text className={styles.TagTitleName}>时间</Typography.Text>
             <TagGroup>{renderTagListB()}</TagGroup>
           </div>
         </Box>
-        <Loading visible={loading} className={styles.mainList}>
-          <Box className={styles.mainContent} spacing={10}>
-            <div className={styles.listItem}>
-              <div className={styles.addContent}>
-                <Icon type="add" className={styles.addContentIcon} size="xs" />
+
+        <Loading visible={loading} className={styles.MainList}>
+          <Box className={styles.MainContent} spacing={10}>
+            <div className={styles.ListItem}>
+              <div className={styles.add}>
+                <Icon type="add" className={styles.icon} size="xs" />
                 <div className={styles.addText}>添加内容</div>
               </div>
             </div>
             {renderCards()}
             <Box margin={[15, 0, 0, 0]} direction="row" align="center" justify="space-between">
-              <div className={styles.totalPagin}>
+              <div className={styles.total}>
                 共<span>200</span>条需求
               </div>
               <Pagination onChange={onPaginationChange} />

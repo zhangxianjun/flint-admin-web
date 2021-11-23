@@ -1,8 +1,6 @@
-import * as React from 'react';
+import React, { useRef, useCallback } from 'react';
 import { Dialog } from '@alifd/next';
 import Operation from './Operation';
-
-const { useRef, useCallback } = React;
 
 const getDialogTitle = (actionType) => {
   switch (actionType) {

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Icon } from '@alifd/next';
 import { Link } from 'ice';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
 const SolutionLink = () => (
   <div className={styles.link}>

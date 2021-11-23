@@ -1,11 +1,9 @@
-import * as React from 'react';
+import React, { useState, useRef } from 'react';
 import { Button, Icon, Checkbox, Overlay } from '@alifd/next';
 import { ReactSortable } from 'react-sortablejs';
 import { getColumnKey } from './util';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
-const { useState, useRef } = React;
-// @ts-ignore
 const TableActionIcon = Icon.createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_1899388_oxn3zhg34oj.js',
 });

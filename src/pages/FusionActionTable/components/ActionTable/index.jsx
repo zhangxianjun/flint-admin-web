@@ -1,11 +1,9 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Card, Table, Button, Icon, Pagination, Message } from '@alifd/next';
 import { useFusionTable, useFullscreen } from 'ahooks';
 import CustomList from './CustomList';
 import { getColumnKey } from './util';
-import styles from './index.module.css';
-
-const { useState } = React; // @ts-ignore
+import styles from './index.module.scss';
 
 const TableActionIcon = Icon.createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_1899388_oxn3zhg34oj.js',

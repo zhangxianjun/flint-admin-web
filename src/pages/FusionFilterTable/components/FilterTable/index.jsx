@@ -3,7 +3,7 @@ import { Button, Select, Form, Field, Table, Card, Pagination } from '@alifd/nex
 import { useFusionTable } from 'ahooks';
 import EmptyBlock from './EmptyBlock';
 import ExceptionBlock from './ExceptionBlock';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
 const FormItem = Form.Item;
 

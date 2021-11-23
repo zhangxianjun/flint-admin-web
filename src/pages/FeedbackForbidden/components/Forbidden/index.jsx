@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Exception from './components/Exception';
 
 export default function Forbidden() {

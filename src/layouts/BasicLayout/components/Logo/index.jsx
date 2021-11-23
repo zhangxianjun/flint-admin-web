@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import { Link } from 'ice';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
 export default function Logo({ image, text, url }) {
   return (
