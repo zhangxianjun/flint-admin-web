@@ -1,6 +1,124 @@
 const headerMenuConfig = [];
 const asideMenuConfig = [
   {
+    name: '首页',
+    path: '/',
+    icon: 'copy',
+    children: [
+      {
+        name: '今日任务',
+        path: '/dashboard/analysis',
+      },
+    ],
+  },
+  {
+    name: '产品',
+    path: '/',
+    icon: 'copy',
+    children: [
+      {
+        name: '产品原型',
+        path: '/dashboard/analysis',
+      },
+      {
+        name: '标注切图',
+        path: '/dashboard/analysis',
+      },
+      {
+        name: '原型反馈',
+        path: '/dashboard/analysis',
+      },
+    ],
+  },
+  {
+    name: '开发',
+    path: '/',
+    icon: 'copy',
+    children: [
+      {
+        name: '开发计划',
+        path: '/dashboard/analysis',
+      },
+      {
+        name: '开发设计',
+        path: '/dashboard/analysis',
+      },
+      {
+        name: '源码管理',
+        path: '/dashboard/analysis',
+      },
+    ],
+  },
+  {
+    name: '测试',
+    path: '/',
+    icon: 'copy',
+    children: [
+      {
+        name: '测试用例',
+        path: '/dashboard/analysis',
+      },
+      {
+        name: 'BUG系统',
+        path: '/dashboard/analysis',
+      },
+      {
+        name: '测试报告',
+        path: '/dashboard/analysis',
+      },
+    ],
+  },
+  {
+    name: '运维',
+    path: '/',
+    icon: 'copy',
+    children: [
+      {
+        name: '服务架构',
+        path: '/dashboard/analysis',
+      },
+      {
+        name: '账号系统',
+        path: '/dashboard/analysis',
+      },
+      {
+        name: '终端系统',
+        path: '/dashboard/analysis',
+      },
+      {
+        name: '主机监控',
+        path: '/dashboard/analysis',
+      },
+      {
+        name: '升级日志',
+        path: '/dashboard/analysis',
+      },
+      {
+        name: '脚本管理',
+        path: '/dashboard/analysis',
+      },
+    ],
+  },
+  {
+    name: '系统',
+    path: '/',
+    icon: 'copy',
+    children: [
+      {
+        name: '用户列表',
+        path: '/dashboard/analysis',
+      },
+      {
+        name: '权限管理',
+        path: '/dashboard/analysis',
+      },
+      {
+        name: '个人设置',
+        path: '/dashboard/analysis',
+      },
+    ],
+  },
+  {
     name: '数据页面',
     path: '/',
     icon: 'chart-pie',
