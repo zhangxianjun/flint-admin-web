@@ -47,27 +47,6 @@ const CardList = (props) => {
 
   return (
     <>
-      {/* <Card free className={styles.CardList}>
-        <Box align="center">
-          <Search type="primary" hasIcon={false} searchText="搜索" onSearch={onSearchClick} />
-        </Box>
-        <Divider
-          dashed
-          style={{
-            margin: '24px 0',
-          }}
-        />
-        <Box className={styles.TagBox}>
-          <div className={styles.TagBoxItem}>
-            <Typography.Text className={styles.TagTitleName}>内容分类</Typography.Text>
-            <TagGroup>{renderTagListA()}</TagGroup>
-          </div>
-          <div className={styles.TagBoxItem}>
-            <Typography.Text className={styles.TagTitleName}>时间</Typography.Text>
-            <TagGroup>{renderTagListB()}</TagGroup>
-          </div>
-        </Box>
-      </Card> */}
       <Loading
         visible={loading}
         style={{
@@ -75,12 +54,6 @@ const CardList = (props) => {
         }}
       >
         <ResponsiveGrid gap={20}>
-          <Cell colSpan={3} className={styles.ListItem}>
-            <Box className={styles.add} justify="center" align="center">
-              <Icon type="add" className={styles.icon} />
-              <div className={styles.addText}>添加内容</div>
-            </Box>
-          </Cell>
           {renderCards()}
         </ResponsiveGrid>
       </Loading>

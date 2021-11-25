@@ -70,13 +70,7 @@ const routerConfig = [
         path: '/team/produce',
         component: TeamProduce,
       },
-    ],
-  },
-  {
-    path: '/',
-    component: BasicLayout,
-    children: [
-      {
+      {   
         path: '/solution',
         component: Solution,
       },
