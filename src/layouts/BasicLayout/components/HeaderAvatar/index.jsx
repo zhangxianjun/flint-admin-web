@@ -5,27 +5,27 @@ import styles from './index.module.scss';
 const { Item } = Menu;
 const { Popup } = Overlay;
 
-const UserProfile = ({ name, avatar, mail }) => {
-  return (
-    <div className={styles.profile}>
-      <div className={styles.avatar}>
-        <Avatar src={avatar} alt="用户头像" />
-      </div>
-      <div className={styles.content}>
-        <h4>{name}</h4>
-        <span>{mail}</span>
-      </div>
-    </div>
-  );
-};
+// const UserProfile = ({ name, avatar, mail }) => {
+//   return (
+//     <div className={styles.profile}>
+//       <div className={styles.avatar}>
+//         <Avatar src={avatar} alt="用户头像" />
+//       </div>
+//       <div className={styles.content}>
+//         <h4>{name}</h4>
+//         <span>{mail}</span>
+//       </div>
+//     </div>
+//   );
+// };
 
 const HeaderAvatar = (props) => {
   const { name, avatar } = props;
   return (
-    <Popup
-      trigger={
+    // <Popup
+    //   trigger={
         <div className={styles.headerAvatar}>
-          <Avatar size="small" src={avatar} alt="用户头像" />
+          {/* <Avatar size="small" src={avatar} alt="用户头像" /> */}
           <span
             style={{
               marginLeft: 10,
@@ -34,10 +34,10 @@ const HeaderAvatar = (props) => {
             {name}
           </span>
         </div>
-      }
-      triggerType="click"
-    >
-      <div className={styles.avatarPopup}>
+      // }
+    //   triggerType="click"
+    // >
+      /* <div className={styles.avatarPopup}>
         <UserProfile {...props} />
         <Menu className={styles.menu}>
           <Item>
@@ -53,8 +53,8 @@ const HeaderAvatar = (props) => {
             退出
           </Item>
         </Menu>
-      </div>
-    </Popup>
+      </div> */
+  //   </Popup>
   );
 };
 

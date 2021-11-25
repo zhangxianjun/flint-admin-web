@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import { Shell, ConfigProvider } from '@alifd/next';
 import PageNav from './components/PageNav';
 import GlobalSearch from './components/GlobalSearch';
-import Notice from './components/Notice';
 import SolutionLink from './components/SolutionLink';
 import HeaderAvatar from './components/HeaderAvatar';
-import Logo from './components/Logo';
 import Footer from './components/Footer';
 
 (function () {
@@ -64,19 +62,18 @@ export default function BasicLayout({ children }) {
         fixedHeader={false}
       >
         <Shell.Branding>
-          <Logo image="https://img.alicdn.com/tfs/TB1.ZBecq67gK0jSZFHXXa9jVXa-904-826.png" text="Logo" />
+          Flint
         </Shell.Branding>
-        <Shell.Navigation
+        {/* <Shell.Navigation
           direction="hoz"
           style={{
             marginRight: 10,
           }}
         >
           <GlobalSearch />
-        </Shell.Navigation>
+        </Shell.Navigation> */}
         <Shell.Action>
-          <Notice />
-          <SolutionLink />
+          {/* <SolutionLink /> */}
           <HeaderAvatar />
         </Shell.Action>
         <Shell.Navigation>
