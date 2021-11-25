@@ -7,7 +7,11 @@ const asideMenuConfig = [
     children: [
       {
         name: '今日任务',
-        path: '/dashboard/analysis',
+        path: '/today/task',
+      },
+      {
+        name: '团队成果',
+        path: '/team/produce',
       },
     ],
   },

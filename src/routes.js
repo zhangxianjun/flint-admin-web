@@ -35,6 +35,9 @@ import FeedbackNotFound from '@/pages/FeedbackNotFound';
 import FeedbackServerError from '@/pages/FeedbackServerError';
 import Settings from '@/pages/Settings';
 import Person from '@/pages/Person';
+import TodayTask from '@/pages/home/TodayTask';
+import TeamProduce from './pages/home/TeamProduce';
+
 
 const routerConfig = [
   {
@@ -52,6 +55,20 @@ const routerConfig = [
       {
         path: '/',
         redirect: '/user/login',
+      },
+    ],
+  },
+  {
+    path: '/',
+    component: BasicLayout,
+    children: [
+      {
+        path: '/today/task',
+        component: TodayTask,
+      },
+      {
+        path: '/team/produce',
+        component: TeamProduce,
       },
     ],
   },
