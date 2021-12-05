@@ -110,7 +110,7 @@ const asideMenuConfig = [
     children: [
       {
         name: '用户列表',
-        path: '/dashboard/analysis',
+        path: '/system/user/list',
       },
       {
         name: '权限管理',

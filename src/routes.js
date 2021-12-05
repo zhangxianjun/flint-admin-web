@@ -37,6 +37,7 @@ import Settings from '@/pages/Settings';
 import Person from '@/pages/Person';
 import TodayTask from '@/pages/home/TodayTask';
 import TeamProduce from './pages/home/TeamProduce';
+import UserList from './pages/system/UserList';
 
 
 const routerConfig = [
@@ -69,6 +70,10 @@ const routerConfig = [
       {
         path: '/team/produce',
         component: TeamProduce,
+      },
+      {
+        path: '/system/user/list',
+        component: UserList,
       },
       {   
         path: '/solution',
