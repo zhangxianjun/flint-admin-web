@@ -14,6 +14,7 @@ const getTableData = ({ current, pageSize }, formData) => {
         query += `&${key}=${value}`;
       }
     });
+    // todo: 替换成自己的接口地址
     return fetch(`https://randomuser.me/api?results=${pageSize}&${query}`)
       .then((res) => res.json())
       .then((res) => ({
