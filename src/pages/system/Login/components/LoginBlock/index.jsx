@@ -53,7 +53,8 @@ const LoginBlock = (
       return;
     }
 
-    console.log('values:', values);
+    // 登录跳转
+
     Message.success('登录成功');
   };
 
@@ -107,11 +108,13 @@ const LoginBlock = (
   );
   const accountForm = (
     <>
-      <Item required requiredMessage="必填">
+      <Item 
+      // required 
+      requiredMessage="必填">
         <Input name="name" maxLength={20} placeholder="用户名" />
       </Item>
       <Item
-        required
+        // required
         requiredMessage="必填"
         style={{
           marginBottom: 0,
@@ -134,20 +137,19 @@ const LoginBlock = (
     <div className={styles.LoginBlock}>
       <div className={styles.innerBlock}>
         <a href="#">
-          <img
+          {/* <img
             className={styles.logo}
-            src="https://img.alicdn.com/tfs/TB1KtN6mKH2gK0jSZJnXXaT1FXa-1014-200.png"
+            src=""
             alt="logo"
-          />
+          /> */}
         </a>
         <div className={styles.desc}>
-          <span onClick={byAccount} className={isPhone ? undefined : styles.active}>
-            账户密码登录
-          </span>
-          <Divider direction="ver" />
+          {/* <span onClick={byAccount} className={isPhone ? undefined : styles.active}> */}
+          <span className={styles.active}> Flint管理后台 </span>
+          {/* <Divider direction="ver" />
           <span onClick={byForm} className={isPhone ? styles.active : undefined}>
             手机号登录
-          </span>
+          </span> */}
         </div>
 
         <Form value={postData} onChange={formChange} size="large">
@@ -179,7 +181,7 @@ const LoginBlock = (
               登录
             </Form.Submit>
           </Item>
-          <div className={styles.infoLine}>
+          {/* <div className={styles.infoLine}>
             <div className={styles.infoLeft}>
               其他登录方式 <Icon type="atm" size="small" /> <Icon type="atm" size="small" />{' '}
               <Icon type="atm" size="small" />
@@ -187,7 +189,7 @@ const LoginBlock = (
             <a href="/" className={styles.link}>
               注册账号
             </a>
-          </div>
+          </div> */}
         </Form>
       </div>
     </div>
