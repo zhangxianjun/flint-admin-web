@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import store from '/Users/maodenden/Documents/flint-admin-web/src/pages/Solution/store';
+import store from '/Users/dushiling/Documents/flint-admin-web/src/pages/Solution/store';
 
-import PageComponent from '/Users/maodenden/Documents/flint-admin-web/src/pages/Solution/index';
+import PageComponent from '/Users/dushiling/Documents/flint-admin-web/src/pages/Solution/index';
 
 const PageComponentName = PageComponent;
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import PageComponent from '/Users/maodenden/Documents/flint-admin-web/src/pages/Analysis/index';
+import PageComponent from '/Users/dushiling/Documents/flint-admin-web/src/pages/Analysis/index';
 
 const PageComponentName = PageComponent;
 

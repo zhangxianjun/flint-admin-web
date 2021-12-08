@@ -1,6 +1,4 @@
 import UserLayout from '@/layouts/UserLayout';
-import Login from '@/pages/Login';
-import Register from '@/pages/Register';
 import BasicLayout from '@/layouts/BasicLayout';
 import Solution from '@/pages/Solution';
 import Analysis from '@/pages/Analysis';
@@ -38,6 +36,8 @@ import Person from '@/pages/Person';
 import TodayTask from '@/pages/home/TodayTask';
 import TeamProduce from './pages/home/TeamProduce';
 import UserList from './pages/system/UserList';
+import Login from '@/pages/system/Login';
+import Register from './pages/system/Register';
 
 
 const routerConfig = [
