@@ -37,8 +37,6 @@ import TodayTask from '@/pages/home/TodayTask';
 import TeamProduce from './pages/home/TeamProduce';
 import UserList from './pages/system/UserList';
 import Login from '@/pages/system/Login';
-import Register from './pages/system/Register';
-
 
 const routerConfig = [
   {
@@ -48,15 +46,7 @@ const routerConfig = [
       {
         path: '/login',
         component: Login,
-      },
-      {
-        path: '/register',
-        component: Register,
-      },
-      {
-        path: '/',
-        redirect: '/user/login',
-      },
+      }
     ],
   },
   {
