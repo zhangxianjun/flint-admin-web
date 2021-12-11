@@ -3,6 +3,9 @@ import { Input, Message, Form, Divider, Checkbox, Icon } from '@alifd/next';
 import { useInterval } from './utils';
 import styles from './index.module.scss';
 import {useHistory } from 'ice';
+import { useRequest } from 'ice';
+import userApi from '@/service/api';
+
 
 const { Item } = Form;
 const DEFAULT_DATA = {
@@ -46,10 +49,15 @@ const LoginBlock = (
       return;
     }
 
+    // 登录请求
+    useRequest(userApi.getDetail({username:"18698581176", password:"zh1991218."}),{
+      
+    });
+
     // 存储登录标识
 
     // 登录跳转
-    history.push('/today/task');
+    // history.push('/today/task');
   };
 
   const accountForm = (

@@ -1,4 +1,10 @@
 {
+  "proxy": {
+    "/api": {
+    "enable": true,
+    "target": "http://localhost:18080/"
+  }
+},
   "plugins": [
     [
       "build-plugin-fusion",

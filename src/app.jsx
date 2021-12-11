@@ -9,5 +9,8 @@ const appConfig = {
     rootId: 'ice-container',
     addProvider: ({ children }) => <LocaleProvider locale={locale}>{children}</LocaleProvider>,
   },
+  request: {
+    baseURL: '//localhost:18080/',
+  },
 };
 runApp(appConfig);
