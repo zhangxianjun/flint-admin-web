@@ -33,8 +33,8 @@ import FeedbackNotFound from '@/pages/FeedbackNotFound';
 import FeedbackServerError from '@/pages/FeedbackServerError';
 import Settings from '@/pages/Settings';
 import Person from '@/pages/Person';
-import TodayTask from '@/pages/home/TodayTask';
-import TeamProduce from './pages/home/TeamProduce';
+import TodayTask from '@/controller/home/TodayTask';
+import TeamProduce from '@/controller/home/TeamProduce';
 import UserList from './pages/system/UserList';
 import Login from '@/pages/system/Login';
 
