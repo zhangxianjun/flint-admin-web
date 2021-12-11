@@ -35,8 +35,8 @@ import Settings from '@/pages/Settings';
 import Person from '@/pages/Person';
 import TodayTask from '@/controller/home/TodayTask';
 import TeamProduce from '@/controller/home/TeamProduce';
-import UserList from './pages/system/UserList';
-import Login from '@/pages/system/Login';
+import UserList from '@/controller/system/UserList';
+import Login from '@/controller/system/Login';
 
 const routerConfig = [
   {
