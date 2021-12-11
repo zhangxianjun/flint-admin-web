@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Input, Message, Form, Divider, Checkbox, Icon } from '@alifd/next';
 import { useInterval } from './utils';
 import styles from './index.module.scss';
+import {useHistory } from 'ice';
 
 const { Item } = Form;
 const DEFAULT_DATA = {
@@ -18,6 +19,9 @@ const LoginBlock = (
     dataSource: DEFAULT_DATA,
   },
 ) => {
+
+  const history = useHistory();
+
   const { dataSource = DEFAULT_DATA } = props;
   const [postData, setValue] = useState(dataSource);
   const [isRunning, checkRunning] = useState(false);
@@ -54,8 +58,8 @@ const LoginBlock = (
     }
 
     // 登录跳转
-
-    Message.success('登录成功');
+    history.push('/today/task');
+    // Message.success('登录成功');
   };
 
   const phoneForm = (
