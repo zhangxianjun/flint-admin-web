@@ -31,6 +31,16 @@ const LoginBlock = (
   const [isPhone, checkPhone] = useState(false);
 
 
+  const { data, error, loading, request } = useRequest({
+    url: '/flint/login',
+    method: 'post',
+    headers:{contentType: "application/json; charset=utf-8"},
+    data: {
+      username: "18698581176",
+      password: "zh1991218."
+    }
+  });
+
   const formChange = (values) => {
     setValue(values);
   };
@@ -49,10 +59,12 @@ const LoginBlock = (
       return;
     }
 
+    request();
+
     // 登录请求
-    useRequest(userApi.getDetail({username:"18698581176", password:"zh1991218."}),{
-      
-    });
+    // useRequest(userApi.getDetail({username:"18698581176", password:"zh1991218."}),{
+    //   manual: true
+    // });
 
     // 存储登录标识
 

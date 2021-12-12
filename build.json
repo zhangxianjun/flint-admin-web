@@ -1,8 +1,11 @@
 {
   "proxy": {
-    "/api": {
+    "/flint": {
     "enable": true,
-    "target": "http://localhost:18080/"
+    "target": "http://localhost:18080",
+    "pathRewrite": {
+      "^/flint": "/" 
+    }
   }
 },
   "plugins": [
